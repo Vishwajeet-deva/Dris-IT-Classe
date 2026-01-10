@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Series - Dris IT Classes</title>
+    <meta name="description" content="Practice with our comprehensive test series for Computer Fundamentals, Programming, Reasoning, and Competitive Exams. Evaluate your preparation level.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2><i class="fas fa-graduation-cap"></i> Dris IT Classes</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="coming-soon.html" class="nav-link">Coming Soon</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li class="nav-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Test Series</h1>
+            <p>Evaluate Your Preparation with Comprehensive Practice Tests</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for tests...">
+                </div>
+                <div class="filter-tabs" id="testTabs">
+                    <button class="tab-button active" data-category="all">All Tests</button>
+                    <button class="tab-button" data-category="computer-fundamentals">Computer Fundamentals</button>
+                    <button class="tab-button" data-category="programming">Programming</button>
+                    <button class="tab-button" data-category="reasoning">Reasoning</button>
+                    <button class="tab-button" data-category="competitive-exams">Competitive Exams</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tests -->
+    <section class="featured-tests">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Test Series</h2>
+                <p>Most Popular and Recommended Practice Tests</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-test">
+                    <div class="test-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="test-badge">Featured</div>
+                    <h3>Complete Computer Fundamentals Test</h3>
+                    <p>Comprehensive test covering all topics in computer fundamentals with detailed solutions.</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 50 Questions</span>
+                        <span><i class="fas fa-clock"></i> 60 Minutes</span>
+                        <span><i class="fas fa-users"></i> 2,345 Attempts</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startTest('computer-fundamentals-complete')">
+                        <i class="fas fa-play"></i> Start Test
+                    </button>
+                </div>
+                <div class="featured-test">
+                    <div class="test-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="test-badge">Popular</div>
+                    <h3>C Programming Mock Test</h3>
+                    <p>Practice C programming concepts with this comprehensive mock test for exam preparation.</p>
+                    <div class="test-meta">
+                        <span><i class="fas fa-question-circle"></i> 40 Questions</span>
+                        <span><i class="fas fa-clock"></i> 45 Minutes</span>
+                        <span><i class="fas fa-users"></i> 1,892 Attempts</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startTest('c-programming-mock')">
+                        <i class="fas fa-play"></i> Start Test
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Categories -->
+    <section class="test-categories">
+        <div class="container">
+            <div class="tests-grid" id="testsGrid">
+                <!-- Computer Fundamentals Tests -->
+                <div class="test-item" data-category="computer-fundamentals">
+                    <div class="test-card">
+                        <div class="test-header">
+                            <div class="test-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h3>Computer Basics Test</h3>
+                        </div>
+                        <div class="test-content">
+                            <p>Test your knowledge of basic computer concepts, hardware, and software fundamentals.</p>
+                            <div class="test-details">
+                                <div class="test-detail">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>30 Questions</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Medium</span>
+                                </div>
+                            </div>
+                            <div class="test-meta">
+                                <span><i class="fas fa-users"></i> 1,234 Attempts</span>
+                                <span><i class="fas fa-chart-line"></i> 75% Average Score</span>
+                            </div>
+                        </div>
+                        <div class="test-actions">
+                            <button class="btn btn-primary" onclick="startTest('computer-basics')">
+                                <i class="fas fa-play"></i> Start Test
+                            </button>
+                            <button class="btn btn-outline" onclick="viewDetails('computer-basics')">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Tests -->
+                <div class="test-item" data-category="programming">
+                    <div class="test-card">
+                        <div class="test-header">
+                            <div class="test-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Python Programming Test</h3>
+                        </div>
+                        <div class="test-content">
+                            <p>Test your Python programming skills including basics, data structures, and problem-solving.</p>
+                            <div class="test-details">
+                                <div class="test-detail">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>35 Questions</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>40 Minutes</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Hard</span>
+                                </div>
+                            </div>
+                            <div class="test-meta">
+                                <span><i class="fas fa-users"></i> 987 Attempts</span>
+                                <span><i class="fas fa-chart-line"></i> 68% Average Score</span>
+                            </div>
+                        </div>
+                        <div class="test-actions">
+                            <button class="btn btn-primary" onclick="startTest('python-programming')">
+                                <i class="fas fa-play"></i> Start Test
+                            </button>
+                            <button class="btn btn-outline" onclick="viewDetails('python-programming')">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reasoning Tests -->
+                <div class="test-item" data-category="reasoning">
+                    <div class="test-card">
+                        <div class="test-header">
+                            <div class="test-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Logical Reasoning Test</h3>
+                        </div>
+                        <div class="test-content">
+                            <p>Challenge your logical reasoning skills with puzzles, patterns, and analytical questions.</p>
+                            <div class="test-details">
+                                <div class="test-detail">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>40 Questions</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>35 Minutes</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Medium</span>
+                                </div>
+                            </div>
+                            <div class="test-meta">
+                                <span><i class="fas fa-users"></i> 2,156 Attempts</span>
+                                <span><i class="fas fa-chart-line"></i> 72% Average Score</span>
+                            </div>
+                        </div>
+                        <div class="test-actions">
+                            <button class="btn btn-primary" onclick="startTest('logical-reasoning')">
+                                <i class="fas fa-play"></i> Start Test
+                            </button>
+                            <button class="btn btn-outline" onclick="viewDetails('logical-reasoning')">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competitive Exam Tests -->
+                <div class="test-item" data-category="competitive-exams">
+                    <div class="test-card">
+                        <div class="test-header">
+                            <div class="test-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>O Level Mock Test</h3>
+                        </div>
+                        <div class="test-content">
+                            <p>Complete mock test for O Level computer examination with all important topics covered.</p>
+                            <div class="test-details">
+                                <div class="test-detail">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>100 Questions</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>120 Minutes</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Hard</span>
+                                </div>
+                            </div>
+                            <div class="test-meta">
+                                <span><i class="fas fa-users"></i> 3,456 Attempts</span>
+                                <span><i class="fas fa-chart-line"></i> 65% Average Score</span>
+                            </div>
+                        </div>
+                        <div class="test-actions">
+                            <button class="btn btn-primary" onclick="startTest('o-level-mock')">
+                                <i class="fas fa-play"></i> Start Test
+                            </button>
+                            <button class="btn btn-outline" onclick="viewDetails('o-level-mock')">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Programming Tests -->
+                <div class="test-item" data-category="programming">
+                    <div class="test-card">
+                        <div class="test-header">
+                            <div class="test-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <h3>Java Programming Test</h3>
+                        </div>
+                        <div class="test-content">
+                            <p>Test your Java programming knowledge including OOP concepts and core APIs.</p>
+                            <div class="test-details">
+                                <div class="test-detail">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>45 Questions</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>50 Minutes</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Hard</span>
+                                </div>
+                            </div>
+                            <div class="test-meta">
+                                <span><i class="fas fa-users"></i> 1,789 Attempts</span>
+                                <span><i class="fas fa-chart-line"></i> 70% Average Score</span>
+                            </div>
+                        </div>
+                        <div class="test-actions">
+                            <button class="btn btn-primary" onclick="startTest('java-programming')">
+                                <i class="fas fa-play"></i> Start Test
+                            </button>
+                            <button class="btn btn-outline" onclick="viewDetails('java-programming')">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Reasoning Tests -->
+                <div class="test-item" data-category="reasoning">
+                    <div class="test-card">
+                        <div class="test-header">
+                            <div class="test-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>Quantitative Aptitude Test</h3>
+                        </div>
+                        <div class="test-content">
+                            <p>Practice quantitative aptitude questions for competitive exams with time management.</p>
+                            <div class="test-details">
+                                <div class="test-detail">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>50 Questions</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>45 Minutes</span>
+                                </div>
+                                <div class="test-detail">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Medium</span>
+                                </div>
+                            </div>
+                            <div class="test-meta">
+                                <span><i class="fas fa-users"></i> 2,678 Attempts</span>
+                                <span><i class="fas fa-chart-line"></i> 74% Average Score</span>
+                            </div>
+                        </div>
+                        <div class="test-actions">
+                            <button class="btn btn-primary" onclick="startTest('quantitative-aptitude')">
+                                <i class="fas fa-play"></i> Start Test
+                            </button>
+                            <button class="btn btn-outline" onclick="viewDetails('quantitative-aptitude')">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Practice Tests</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Test Attempts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Subjects Covered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.7/5</div>
+                    <div class="stat-label">Test Quality Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Test Your Knowledge?</h2>
+                <p>Start practicing with our comprehensive test series and improve your exam performance</p>
+                <div class="cta-buttons">
+                    <a href="courses.html" class="btn btn-primary btn-large">Browse Courses</a>
+                    <a href="free-notes.html" class="btn btn-secondary btn-large">Study Materials</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Modal -->
+    <div id="testModal" class="test-modal">
+        <div class="test-modal-content">
+            <div class="test-modal-header">
+                <h2 id="testTitle">Test Title</h2>
+                <div class="test-timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timeRemaining">00:00</span>
+                </div>
+                <button class="close-modal" onclick="closeTestModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="test-modal-body">
+                <div class="test-progress">
+                    <div class="progress-info">
+                        <span>Question <span id="currentQuestion">1</span> of <span id="totalQuestions">25</span></span>
+                        <span>Score: <span id="currentScore">0</span></span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                </div>
+                <div id="questionContainer" class="question-container">
+                    <!-- Questions will be loaded here -->
+                </div>
+            </div>
+            <div class="test-modal-footer">
+                <button id="prevBtn" class="btn btn-outline" onclick="previousQuestion()" disabled>
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button id="nextBtn" class="btn btn-primary" onclick="nextQuestion()">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button id="submitBtn" class="btn btn-success" onclick="submitTest()" style="display: none;">
+                    <i class="fas fa-check"></i> Submit Test
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Results Modal -->
+    <div id="resultsModal" class="test-modal">
+        <div class="results-modal-content">
+            <div class="results-header">
+                <h2><i class="fas fa-trophy"></i> Test Results</h2>
+                <button class="close-modal" onclick="closeResultsModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="results-body">
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="finalScore">0%</span>
+                    </div>
+                    <h3 id="resultMessage">Great Job!</h3>
+                </div>
+                <div class="results-stats">
+                    <div class="stat-item correct">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Correct: <strong id="correctAnswers">0</strong></span>
+                    </div>
+                    <div class="stat-item wrong">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Wrong: <strong id="wrongAnswers">0</strong></span>
+                    </div>
+                    <div class="stat-item missed">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span>Missed: <strong id="missedAnswers">0</strong></span>
+                    </div>
+                    <div class="stat-item time">
+                        <i class="fas fa-clock"></i>
+                        <span>Time: <strong id="timeTaken">00:00</strong></span>
+                    </div>
+                </div>
+                <div class="results-actions">
+                    <button class="btn btn-primary" onclick="reviewAnswers()">
+                        <i class="fas fa-eye"></i> Review Answers
+                    </button>
+                    <button class="btn btn-outline" onclick="retakeTest()">
+                        <i class="fas fa-redo"></i> Retake Test
+                    </button>
+                    <button class="btn btn-success" onclick="closeResultsModal()">
+                        <i class="fas fa-home"></i> Back to Tests
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Dris IT Classes</h3>
+                    <p>Providing quality computer education at affordable prices since 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="free-notes.html">Free Notes</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="test-series.html">Test Series</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Pages</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@drisitclasses.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dris IT Classes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Test Questions Database
+        const testQuestions = {
+            'computer-fundamentals-complete': {
+                title: 'Complete Computer Fundamentals Test',
+                time: 60,
+                questions: [
+                    {
+                        question: 'What is the full form of CPU?',
+                        options: ['Central Processing Unit', 'Computer Processing Unit', 'Central Program Unit', 'Computer Program Unit'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a volatile memory?',
+                        options: ['ROM', 'RAM', 'Hard Disk', 'SSD'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the binary equivalent of decimal number 10?',
+                        options: ['1000', '1010', '1100', '1110'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which device is used for inputting images into a computer?',
+                        options: ['Printer', 'Scanner', 'Monitor', 'Speaker'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the full form of USB?',
+                        options: ['Universal Serial Bus', 'Universal Service Bus', 'Universal System Bus', 'Universal Serial Buffer'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is an operating system?',
+                        options: ['Microsoft Office', 'Windows 10', 'Google Chrome', 'Adobe Photoshop'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the primary function of ALU?',
+                        options: ['Storage', 'Input/Output', 'Arithmetic and Logic Operations', 'Control Operations'],
+                        correct: 2
+                    },
+                    {
+                        question: 'Which generation of computers used microprocessors?',
+                        options: ['First Generation', 'Second Generation', 'Third Generation', 'Fourth Generation'],
+                        correct: 3
+                    },
+                    {
+                        question: 'What is the full form of LAN?',
+                        options: ['Local Area Network', 'Large Area Network', 'Long Area Network', 'Local Access Network'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is not a programming language?',
+                        options: ['Python', 'HTML', 'Java', 'C++'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the purpose of cache memory?',
+                        options: ['Permanent Storage', 'Speed up CPU operations', 'Input/Output operations', 'Network communication'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which of the following is a database software?',
+                        options: ['MS Word', 'MS Excel', 'MS Access', 'MS PowerPoint'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the full form of WWW?',
+                        options: ['World Wide Web', 'World Wide Wait', 'Web World Wide', 'Wide World Web'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which protocol is used for secure web browsing?',
+                        options: ['HTTP', 'HTTPS', 'FTP', 'SMTP'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the purpose of a firewall?',
+                        options: ['Speed up internet', 'Network security', 'Data storage', 'File sharing'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which of the following is an input device?',
+                        options: ['Monitor', 'Printer', 'Keyboard', 'Speaker'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the full form of PDF?',
+                        options: ['Portable Document Format', 'Portable Data Format', 'Portable Document File', 'Portable Data File'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a spreadsheet software?',
+                        options: ['MS Word', 'MS Excel', 'MS PowerPoint', 'MS Access'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the binary equivalent of decimal number 15?',
+                        options: ['1110', '1111', '1101', '1011'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which of the following is a web browser?',
+                        options: ['MS Word', 'Google Chrome', 'MS Excel', 'Adobe Photoshop'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the purpose of RAM?',
+                        options: ['Permanent storage', 'Temporary storage', 'Network storage', 'Backup storage'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which of the following is an antivirus software?',
+                        options: ['MS Office', 'Quick Heal', 'Google Chrome', 'Adobe Reader'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the full form of IP?',
+                        options: ['Internet Protocol', 'Internet Provider', 'International Protocol', 'Internal Protocol'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a cloud storage service?',
+                        options: ['MS Office', 'Google Drive', 'MS Excel', 'Adobe Photoshop'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the purpose of a motherboard?',
+                        options: ['Storage device', 'Input device', 'Connect all components', 'Output device'],
+                        correct: 2
+                    }
+                ]
+            },
+            'c-programming-mock': {
+                title: 'C Programming Mock Test',
+                time: 45,
+                questions: [
+                    {
+                        question: 'Which function is used to print output in C?',
+                        options: ['print()', 'printf()', 'cout', 'System.out.println()'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the correct way to declare an integer variable in C?',
+                        options: ['int x;', 'integer x;', 'var x;', 'declare x as int;'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is not a data type in C?',
+                        options: ['int', 'float', 'string', 'char'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the size of int data type in C?',
+                        options: ['2 bytes', '4 bytes', '8 bytes', '1 byte'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which operator is used for pointer dereferencing?',
+                        options: ['&', '*', '->', '.'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the correct way to include a header file in C?',
+                        options: ['#include <stdio.h>', 'include stdio.h', '#import stdio.h', 'using stdio.h;'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which function is used to allocate memory dynamically?',
+                        options: ['malloc()', 'alloc()', 'new()', 'create()'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the return type of main() function?',
+                        options: ['void', 'int', 'char', 'float'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which of the following is used for single line comment in C?',
+                        options: ['//', '/* */', '#', '--'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to declare a pointer in C?',
+                        options: ['int *ptr;', 'pointer ptr;', 'int ptr*;', 'ptr* int;'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which function is used to read input from user?',
+                        options: ['scanf()', 'read()', 'input()', 'get()'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of return statement?',
+                        options: ['Loop control', 'Return value from function', 'Print output', 'Read input'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which of the following is a loop statement?',
+                        options: ['if', 'switch', 'for', 'case'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the correct way to initialize an array?',
+                        options: ['int arr[] = {1,2,3};', 'int arr = {1,2,3};', 'array arr = {1,2,3};', 'int arr[3] = 1,2,3;'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which operator is used for modulo operation?',
+                        options: ['/', '%', '//', 'mod'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the purpose of break statement?',
+                        options: ['Continue loop', 'Exit loop or switch', 'Start loop', 'Pause loop'],
+                        correct: 1
+                    },
+                    {
+                        question: 'Which of the following is a storage class specifier?',
+                        options: ['static', 'public', 'private', 'protected'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to define a constant?',
+                        options: ['#define PI 3.14', 'const PI = 3.14', 'constant PI 3.14', 'define PI 3.14'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which function is used to find string length?',
+                        options: ['strlen()', 'length()', 'size()', 'count()'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of struct keyword?',
+                        options: ['Define structure', 'Define function', 'Define loop', 'Define array'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a logical operator?',
+                        options: ['&&', '+=', '++', '--'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to declare a function?',
+                        options: ['int add(int a, int b);', 'function add(a, b);', 'def add(a, b);', 'add(a, b) int;'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which function is used to copy strings?',
+                        options: ['strcpy()', 'copy()', 'strcopy()', 'stringcopy()'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of header files?',
+                        options: ['Store function declarations', 'Store main function', 'Store variables', 'Store loops'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is used for file handling?',
+                        options: ['FILE*', 'file', 'fstream', 'handle'],
+                        correct: 0
+                    }
+                ]
+            },
+            'computer-basics': {
+                title: 'Computer Basics Test',
+                time: 30,
+                questions: [
+                    {
+                        question: 'Who is known as the father of computer?',
+                        options: ['Charles Babbage', 'Bill Gates', 'Steve Jobs', 'Mark Zuckerberg'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the brain of the computer?',
+                        options: ['CPU', 'RAM', 'Hard Disk', 'Monitor'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is an output device?',
+                        options: ['Keyboard', 'Mouse', 'Printer', 'Scanner'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the full form of computer?',
+                        options: ['Commonly Operated Machine Particularly Used for Technical Education Research', 'Commonly Operated Machine Programmably Used for Technical Education Research', 'Computing Oriented Machine Programmably Used for Technical Education Research', 'Commonly Operated Machine Programmably Used for Teaching Education Research'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is not a computer generation?',
+                        options: ['First Generation', 'Second Generation', 'Third Generation', 'Fifth Generation'],
+                        correct: 3
+                    },
+                    {
+                        question: 'What is the purpose of an operating system?',
+                        options: ['Manage hardware resources', 'Write programs', 'Design websites', 'Create documents'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a portable computer?',
+                        options: ['Desktop', 'Laptop', 'Server', 'Mainframe'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the full form of WWW?',
+                        options: ['World Wide Web', 'World Wide Wait', 'Web World Wide', 'Wide World Web'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a web browser?',
+                        options: ['MS Word', 'Google Chrome', 'MS Excel', 'Adobe Photoshop'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the purpose of antivirus software?',
+                        options: ['Protect from viruses', 'Speed up computer', 'Clean screen', 'Improve sound'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a storage device?',
+                        options: ['RAM', 'CPU', 'Monitor', 'Keyboard'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the full form of PDF?',
+                        options: ['Portable Document Format', 'Portable Data Format', 'Portable Document File', 'Portable Data File'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a presentation software?',
+                        options: ['MS Word', 'MS Excel', 'MS PowerPoint', 'MS Access'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the purpose of email?',
+                        options: ['Send electronic messages', 'Make phone calls', 'Browse internet', 'Create documents'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a search engine?',
+                        options: ['Google', 'Facebook', 'Twitter', 'Instagram'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the full form of URL?',
+                        options: ['Uniform Resource Locator', 'Universal Resource Locator', 'Uniform Resource Link', 'Universal Resource Link'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a social media platform?',
+                        options: ['Facebook', 'MS Word', 'MS Excel', 'MS PowerPoint'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of backup?',
+                        options: ['Save data copy', 'Delete data', 'Speed up computer', 'Clean computer'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a video conferencing software?',
+                        options: ['Zoom', 'MS Word', 'MS Excel', 'MS PowerPoint'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the full form of IT?',
+                        options: ['Information Technology', 'Internet Technology', 'International Technology', 'Integrated Technology'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a programming language?',
+                        options: ['Python', 'MS Word', 'MS Excel', 'MS PowerPoint'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of firewall?',
+                        options: ['Network security', 'Speed up internet', 'Data storage', 'File sharing'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a cloud storage service?',
+                        options: ['Google Drive', 'MS Word', 'MS Excel', 'MS PowerPoint'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of password?',
+                        options: ['Security', 'Speed', 'Storage', 'Display'],
+                        correct: 0
+                    }
+                ]
+            },
+            'python-programming': {
+                title: 'Python Programming Test',
+                time: 40,
+                questions: [
+                    {
+                        question: 'Which keyword is used to define a function in Python?',
+                        options: ['def', 'function', 'func', 'define'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to print "Hello World" in Python?',
+                        options: ['print("Hello World")', 'echo "Hello World"', 'console.log("Hello World")', 'System.out.println("Hello World")'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a mutable data type in Python?',
+                        options: ['list', 'tuple', 'string', 'int'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a list in Python?',
+                        options: ['mylist = [1, 2, 3]', 'mylist = (1, 2, 3)', 'mylist = {1, 2, 3}', 'mylist = 1, 2, 3'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which symbol is used for comments in Python?',
+                        options: ['#', '//', '/* */', '--'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to import a module in Python?',
+                        options: ['import math', 'include math', 'using math', '#include math'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which function is used to get user input in Python?',
+                        options: ['input()', 'read()', 'get()', 'scan()'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a dictionary in Python?',
+                        options: ['mydict = {"key": "value"}', 'mydict = {"key": "value"}', 'mydict = ["key": "value"]', 'mydict = ("key": "value")'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is used for string formatting in Python?',
+                        options: ['f-string', 'format()', '% operator', 'All of the above'],
+                        correct: 3
+                    },
+                    {
+                        question: 'What is the correct way to create a class in Python?',
+                        options: ['class MyClass:', 'class MyClass', 'define MyClass:', 'create MyClass:'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which method is used to initialize an object in Python?',
+                        options: ['__init__', 'initialize', 'constructor', 'create'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to handle exceptions in Python?',
+                        options: ['try-except', 'try-catch', 'try-handle', 'try-error'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a built-in data type in Python?',
+                        options: ['list', 'array', 'struct', 'enum'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a tuple in Python?',
+                        options: ['mytuple = (1, 2, 3)', 'mytuple = [1, 2, 3]', 'mytuple = {1, 2, 3}', 'mytuple = 1, 2, 3'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which function is used to get the length of a list in Python?',
+                        options: ['len()', 'length()', 'size()', 'count()'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a set in Python?',
+                        options: ['myset = {1, 2, 3}', 'myset = [1, 2, 3]', 'myset = (1, 2, 3)', 'myset = {"key": "value"}'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is used for loops in Python?',
+                        options: ['for', 'loop', 'while', 'do-while'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to check if a key exists in a dictionary?',
+                        options: ['key in dict', 'dict.has_key(key)', 'dict.contains(key)', 'dict.exists(key)'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which function is used to open a file in Python?',
+                        options: ['open()', 'file()', 'read()', 'load()'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a lambda function in Python?',
+                        options: ['lambda x: x*2', 'def x: x*2', 'function x: x*2', 'create x: x*2'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is used for list comprehension in Python?',
+                        options: ['[x for x in range(10)]', 'list(x for x in range(10))', '[x: for x in range(10)]', 'list[x for x in range(10)]'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a virtual environment in Python?',
+                        options: ['python -m venv env', 'python venv env', 'python create env', 'python virtual env'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which function is used to sort a list in Python?',
+                        options: ['sort()', 'sorted()', 'order()', 'arrange()'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to install a package using pip?',
+                        options: ['pip install package', 'pip package install', 'install package pip', 'package install pip'],
+                        correct: 0
+                    }
+                ]
+            },
+            'logical-reasoning': {
+                title: 'Logical Reasoning Test',
+                time: 35,
+                questions: [
+                    {
+                        question: 'If A = 1, B = 2, C = 3, then what is the value of FACE?',
+                        options: ['6135', '6315', '6513', '6351'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Complete the series: 2, 6, 12, 20, 30, ?',
+                        options: ['40', '42', '44', '46'],
+                        correct: 1
+                    },
+                    {
+                        question: 'If CAT is coded as 312, how is DOG coded?',
+                        options: ['415', '514', '416', '615'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Find the odd one out: 2, 3, 5, 7, 9, 11',
+                        options: ['2', '3', '9', '11'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If Monday is to Tuesday, then January is to?',
+                        options: ['February', 'March', 'December', 'November'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Complete the analogy: Doctor is to Patient as Teacher is to?',
+                        options: ['Student', 'Book', 'School', 'Knowledge'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Find the missing number: 1, 4, 9, 16, 25, ?',
+                        options: ['36', '49', '64', '81'],
+                        correct: 0
+                    },
+                    {
+                        question: 'If all roses are flowers and some flowers fade quickly, which statement is true?',
+                        options: ['Some roses fade quickly', 'All roses fade quickly', 'No roses fade quickly', 'Some flowers are roses'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Complete the series: AB, BC, CD, DE, ?',
+                        options: ['EF', 'FG', 'GH', 'HI'],
+                        correct: 0
+                    },
+                    {
+                        question: 'If 5 + 3 = 28, 9 + 1 = 810, then 7 + 2 = ?',
+                        options: ['514', '145', '415', '154'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Find the odd one out: Apple, Orange, Potato, Banana',
+                        options: ['Apple', 'Orange', 'Potato', 'Banana'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If A is taller than B, and B is taller than C, then?',
+                        options: ['A is taller than C', 'C is taller than A', 'A and C are same height', 'Cannot determine'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Complete the series: 3, 6, 9, 12, 15, ?',
+                        options: ['16', '17', '18', '19'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If BOOK = 43, then PEN = ?',
+                        options: ['35', '36', '37', '38'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Find the pattern: 1, 1, 2, 3, 5, 8, ?',
+                        options: ['11', '12', '13', '14'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If all cats are animals and some animals are pets, which statement is true?',
+                        options: ['Some cats are pets', 'All cats are pets', 'No cats are pets', 'Some pets are cats'],
+                        correct: 3
+                    },
+                    {
+                        question: 'Complete the analogy: Pen is to Write as Knife is to?',
+                        options: ['Cut', 'Sharp', 'Steel', 'Handle'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Find the missing number: 2, 5, 10, 17, 26, ?',
+                        options: ['35', '36', '37', '38'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If 1 = 5, 2 = 10, 3 = 15, then 4 = ?',
+                        options: ['16', '18', '20', '22'],
+                        correct: 2
+                    },
+                    {
+                        question: 'Complete the series: AZ, BY, CX, DW, ?',
+                        options: ['EV', 'FU', 'GT', 'HS'],
+                        correct: 0
+                    },
+                    {
+                        question: 'If today is Monday, what day will it be after 100 days?',
+                        options: ['Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Find the odd one out: Circle, Square, Triangle, Line',
+                        options: ['Circle', 'Square', 'Triangle', 'Line'],
+                        correct: 3
+                    },
+                    {
+                        question: 'If 8 + 8 = 16, 9 + 9 = 18, then 10 + 10 = ?',
+                        options: ['20', '21', '22', '23'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Complete the series: 1, 4, 7, 10, 13, ?',
+                        options: ['14', '15', '16', '17'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If RED is coded as 672, then BLUE is coded as?',
+                        options: ['2145', '2154', '2415', '2514'],
+                        correct: 0
+                    }
+                ]
+            },
+            'o-level-mock': {
+                title: 'O Level Mock Test',
+                time: 120,
+                questions: [
+                    {
+                        question: 'What is the full form of HTML?',
+                        options: ['HyperText Markup Language', 'HighText Markup Language', 'HyperText Markup Languaging', 'HighText Markup Languaging'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which tag is used to create a hyperlink in HTML?',
+                        options: ['<a>', '<link>', '<href>', '<url>'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a paragraph in HTML?',
+                        options: ['<p>', '<paragraph>', '<para>', '<pg>'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which CSS property is used to change text color?',
+                        options: ['color', 'text-color', 'font-color', 'foreground-color'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to include CSS in HTML?',
+                        options: ['<link rel="stylesheet" href="style.css">', '<style src="style.css">', '<css src="style.css">', '<stylesheet src="style.css">'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which JavaScript keyword is used to declare a variable?',
+                        options: ['var', 'variable', 'declare', 'dim'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a function in JavaScript?',
+                        options: ['function myFunction() {}', 'create myFunction() {}', 'def myFunction() {}', 'func myFunction() {}'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a database management system?',
+                        options: ['MySQL', 'MS Word', 'MS Excel', 'MS PowerPoint'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the full form of SQL?',
+                        options: ['Structured Query Language', 'Simple Query Language', 'Standard Query Language', 'System Query Language'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which SQL command is used to retrieve data from database?',
+                        options: ['SELECT', 'GET', 'RETRIEVE', 'FETCH'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is a primary key in a database?',
+                        options: ['Unique identifier for each record', 'Foreign key reference', 'Index key', 'Sort key'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a network protocol?',
+                        options: ['HTTP', 'HTML', 'CSS', 'JavaScript'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the full form of URL?',
+                        options: ['Uniform Resource Locator', 'Universal Resource Locator', 'Uniform Resource Link', 'Universal Resource Link'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is an IP address?',
+                        options: ['192.168.1.1', '192.168.1', '192.168', '192'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of DNS?',
+                        options: ['Domain name resolution', 'Network security', 'File sharing', 'Email service'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a web server?',
+                        options: ['Apache', 'MS Word', 'MS Excel', 'MS PowerPoint'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the full form of FTP?',
+                        options: ['File Transfer Protocol', 'File Transmission Protocol', 'File Transfer Process', 'File Transmission Process'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is an email protocol?',
+                        options: ['SMTP', 'HTTP', 'FTP', 'DNS'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of firewall?',
+                        options: ['Network security', 'Speed up internet', 'Data storage', 'File sharing'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a programming language?',
+                        options: ['Java', 'MS Word', 'MS Excel', 'MS PowerPoint'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the full form of OOP?',
+                        options: ['Object Oriented Programming', 'Object Oriented Process', 'Object Oriented Program', 'Object Oriented Procedure'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a concept of OOP?',
+                        options: ['Inheritance', 'Iteration', 'Recursion', 'Sorting'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the purpose of constructor in OOP?',
+                        options: ['Initialize object', 'Destroy object', 'Copy object', 'Compare object'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a data structure?',
+                        options: ['Array', 'MS Word', 'MS Excel', 'MS PowerPoint'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the full form of API?',
+                        options: ['Application Programming Interface', 'Application Process Interface', 'Application Program Interface', 'Application Process Integration'],
+                        correct: 0
+                    }
+                ]
+            },
+            'java-programming': {
+                title: 'Java Programming Test',
+                time: 50,
+                questions: [
+                    {
+                        question: 'What is the correct way to declare a main method in Java?',
+                        options: ['public static void main(String[] args)', 'public void main(String[] args)', 'static void main(String[] args)', 'void main(String[] args)'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which keyword is used to create a class in Java?',
+                        options: ['class', 'Class', 'create', 'define'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create an object in Java?',
+                        options: ['MyClass obj = new MyClass();', 'MyClass obj = MyClass();', 'new MyClass obj;', 'obj = new MyClass();'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is not a primitive data type in Java?',
+                        options: ['String', 'int', 'double', 'boolean'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to declare an array in Java?',
+                        options: ['int[] arr = new int[10];', 'int arr = new int[10];', 'int arr[] = new int[10];', 'array arr = new int[10];'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which keyword is used for inheritance in Java?',
+                        options: ['extends', 'implements', 'inherits', 'extends from'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a string in Java?',
+                        options: ['String str = "Hello";', 'string str = "Hello";', 'str = "Hello";', 'text str = "Hello";'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is an access modifier in Java?',
+                        options: ['public', 'private', 'protected', 'All of the above'],
+                        correct: 3
+                    },
+                    {
+                        question: 'What is the correct way to create a method in Java?',
+                        options: ['public void myMethod() {}', 'public method myMethod() {}', 'public function myMethod() {}', 'public def myMethod() {}'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which keyword is used to call parent class constructor?',
+                        options: ['super', 'this', 'parent', 'base'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to handle exceptions in Java?',
+                        options: ['try-catch', 'try-except', 'try-handle', 'try-error'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is an interface in Java?',
+                        options: ['interface MyInterface {}', 'class MyInterface {}', 'interface MyInterface();', 'interface MyInterface[]'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create an ArrayList in Java?',
+                        options: ['ArrayList<String> list = new ArrayList<>();', 'ArrayList list = new ArrayList();', 'List<String> list = new ArrayList<>();', 'Both A and C'],
+                        correct: 3
+                    },
+                    {
+                        question: 'Which keyword is used for method overriding in Java?',
+                        options: ['@Override', 'override', 'overriding', 'extends'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a HashMap in Java?',
+                        options: ['HashMap<String, Integer> map = new HashMap<>();', 'HashMap map = new HashMap();', 'Map<String, Integer> map = new HashMap<>();', 'Both A and C'],
+                        correct: 3
+                    },
+                    {
+                        question: 'Which of the following is a loop statement in Java?',
+                        options: ['for', 'loop', 'repeat', 'do-while'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a thread in Java?',
+                        options: ['class MyThread extends Thread', 'class MyThread implements Runnable', 'Both A and B', 'None of the above'],
+                        correct: 2
+                    },
+                    {
+                        question: 'Which keyword is used for abstraction in Java?',
+                        options: ['abstract', 'interface', 'Both A and B', 'None of the above'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the correct way to compare strings in Java?',
+                        options: ['str1.equals(str2)', 'str1 == str2', 'str1.compare(str2)', 'str1.matches(str2)'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a collection framework in Java?',
+                        options: ['java.util', 'java.collection', 'java.collections', 'java.framework'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to create a package in Java?',
+                        options: ['package com.example;', 'import com.example;', 'using com.example;', 'include com.example;'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which keyword is used for polymorphism in Java?',
+                        options: ['Method overloading and overriding', 'extends', 'implements', 'abstract'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the correct way to read input from user in Java?',
+                        options: ['Scanner scanner = new Scanner(System.in);', 'Input scanner = new Input(System.in);', 'Reader scanner = new Reader(System.in);', 'Console scanner = new Console(System.in);'],
+                        correct: 0
+                    },
+                    {
+                        question: 'Which of the following is a design pattern in Java?',
+                        options: ['Singleton', 'Factory', 'Observer', 'All of the above'],
+                        correct: 3
+                    },
+                    {
+                        question: 'What is the correct way to create a file in Java?',
+                        options: ['File file = new File("filename.txt");', 'File file = create File("filename.txt");', 'File file = new File("filename.txt").create();', 'File file = File.create("filename.txt");'],
+                        correct: 0
+                    }
+                ]
+            },
+            'quantitative-aptitude': {
+                title: 'Quantitative Aptitude Test',
+                time: 45,
+                questions: [
+                    {
+                        question: 'If 15% of 40 is 6, what is 25% of 80?',
+                        options: ['10', '15', '20', '25'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the average of first 10 natural numbers?',
+                        options: ['5.5', '5', '6', '4.5'],
+                        correct: 0
+                    },
+                    {
+                        question: 'If a train travels 300 km in 4 hours, what is its speed?',
+                        options: ['60 km/h', '75 km/h', '80 km/h', '90 km/h'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is 15% of 200?',
+                        options: ['25', '30', '35', '40'],
+                        correct: 1
+                    },
+                    {
+                        question: 'If the ratio of A:B is 3:4 and B:C is 5:6, what is A:C?',
+                        options: ['15:24', '5:8', '3:6', '15:18'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the square root of 144?',
+                        options: ['10', '11', '12', '13'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If 3x + 7 = 19, what is the value of x?',
+                        options: ['2', '3', '4', '5'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is 20% of 150?',
+                        options: ['25', '30', '35', '40'],
+                        correct: 1
+                    },
+                    {
+                        question: 'If the sum of two numbers is 45 and their difference is 15, what are the numbers?',
+                        options: ['30 and 15', '25 and 20', '35 and 10', '40 and 5'],
+                        correct: 0
+                    },
+                    {
+                        question: 'What is the cube of 7?',
+                        options: ['343', '324', '361', '400'],
+                        correct: 0
+                    },
+                    {
+                        question: 'If a person buys an item for $80 and sells it for $100, what is the profit percentage?',
+                        options: ['20%', '25%', '30%', '35%'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the LCM of 12 and 18?',
+                        options: ['24', '36', '48', '54'],
+                        correct: 1
+                    },
+                    {
+                        question: 'If 5 workers can complete a task in 10 days, how many days will 10 workers take?',
+                        options: ['2 days', '3 days', '4 days', '5 days'],
+                        correct: 4
+                    },
+                    {
+                        question: 'What is 25% of 400?',
+                        options: ['80', '90', '100', '110'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If the area of a square is 64 cm², what is its perimeter?',
+                        options: ['16 cm', '24 cm', '32 cm', '40 cm'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the sum of first 20 natural numbers?',
+                        options: ['200', '210', '220', '230'],
+                        correct: 1
+                    },
+                    {
+                        question: 'If 2x + 3y = 12 and x = 3, what is the value of y?',
+                        options: ['1', '2', '3', '4'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is 30% of 250?',
+                        options: ['65', '70', '75', '80'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If a car travels 180 km in 3 hours, what is its speed?',
+                        options: ['50 km/h', '60 km/h', '70 km/h', '80 km/h'],
+                        correct: 1
+                    },
+                    {
+                        question: 'What is the HCF of 24 and 36?',
+                        options: ['6', '8', '12', '18'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If cost price is $50 and selling price is $60, what is the profit?',
+                        options: ['$5', '$8', '$10', '$12'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is the square of 13?',
+                        options: ['144', '169', '196', '225'],
+                        correct: 1
+                    },
+                    {
+                        question: 'If 4x - 7 = 13, what is the value of x?',
+                        options: ['3', '4', '5', '6'],
+                        correct: 2
+                    },
+                    {
+                        question: 'What is 40% of 300?',
+                        options: ['100', '110', '120', '130'],
+                        correct: 2
+                    },
+                    {
+                        question: 'If the radius of a circle is 7 cm, what is its area?',
+                        options: ['154 cm²', '165 cm²', '176 cm²', '187 cm²'],
+                        correct: 0
+                    }
+                ]
+            }
+        };
+
+        // Test State Variables
+        let currentTest = null;
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let missedQuestions = [];
+        let score = 0;
+        let timer = null;
+        let questionTimer = null;
+        let timeRemaining = 0;
+        let questionTimeRemaining = 90;
+        let startTime = null;
+
+        // Start Test Function
+        function startTest(testId) {
+            currentTest = testQuestions[testId];
+            if (!currentTest) {
+                showToast('Test not found!', 'error');
+                return;
+            }
+
+            currentQuestionIndex = 0;
+            userAnswers = [];
+            missedQuestions = [];
+            score = 0;
+            timeRemaining = currentTest.time * 60;
+            questionTimeRemaining = 90;
+            startTime = Date.now();
+
+            document.getElementById('testTitle').textContent = currentTest.title;
+            document.getElementById('totalQuestions').textContent = currentTest.questions.length;
+            document.getElementById('testModal').style.display = 'flex';
+
+            loadQuestion();
+            startTimer();
+            startQuestionTimer();
+            updateProgress();
+        }
+
+        // Load Question
+        function loadQuestion() {
+            const question = currentTest.questions[currentQuestionIndex];
+            const container = document.getElementById('questionContainer');
+            
+            container.innerHTML = `
+                <div class="question-card">
+                    <div class="question-text">
+                        <span class="question-number">Question ${currentQuestionIndex + 1}</span>
+                        <p>${question.question}</p>
+                    </div>
+                    <div class="options-container">
+                        ${question.options.map((option, index) => `
+                            <label class="option-label">
+                                <input type="radio" name="answer" value="${index}" ${userAnswers[currentQuestionIndex] === index ? 'checked' : ''}>
+                                <span class="option-text">${option}</span>
+                            </label>
+                            `).join('')}
+                    </div>
+                </div>
+            `;
+
+            // Add event listeners to options
+            const options = container.querySelectorAll('input[name="answer"]');
+            options.forEach(option => {
+                option.addEventListener('change', function() {
+                    userAnswers[currentQuestionIndex] = parseInt(this.value);
+                    // Move to next question automatically when answer is selected
+                    setTimeout(() => {
+                        if (currentQuestionIndex < currentTest.questions.length - 1) {
+                            nextQuestion();
+                        } else {
+                            submitTest();
+                        }
+                    }, 500);
+                });
+            });
+
+            updateProgress();
+            updateButtons();
+        }
+
+        // Timer Functions
+        function startTimer() {
+            timer = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                
+                if (timeRemaining <= 0) {
+                    clearInterval(timer);
+                    submitTest();
+                }
+            }, 1000);
+        }
+
+        function startQuestionTimer() {
+            // Clear existing question timer
+            if (questionTimer) {
+                clearInterval(questionTimer);
+            }
+            
+            questionTimeRemaining = 90;
+            updateQuestionTimerDisplay();
+            
+            questionTimer = setInterval(() => {
+                questionTimeRemaining--;
+                updateQuestionTimerDisplay();
+                
+                // Add warning classes
+                const timerElement = document.querySelector('.test-timer');
+                if (questionTimeRemaining <= 30 && questionTimeRemaining > 10) {
+                    timerElement.classList.add('warning');
+                    timerElement.classList.remove('danger');
+                } else if (questionTimeRemaining <= 10) {
+                    timerElement.classList.add('danger');
+                    timerElement.classList.remove('warning');
+                } else {
+                    timerElement.classList.remove('warning', 'danger');
+                }
+                
+                if (questionTimeRemaining <= 0) {
+                    clearInterval(questionTimer);
+                    // Mark question as missed
+                    missedQuestions.push(currentQuestionIndex);
+                    userAnswers[currentQuestionIndex] = null;
+                    
+                    // Show missed notification
+                    showToast(`Question ${currentQuestionIndex + 1} missed due to timeout!`, 'warning');
+                    
+                    // Move to next question or submit test
+                    if (currentQuestionIndex < currentTest.questions.length - 1) {
+                        currentQuestionIndex++;
+                        loadQuestion();
+                        startQuestionTimer();
+                    } else {
+                        submitTest();
+                    }
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById('timeRemaining').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function updateQuestionTimerDisplay() {
+            const timerElement = document.querySelector('.test-timer');
+            if (timerElement) {
+                const minutes = Math.floor(questionTimeRemaining / 60);
+                const seconds = questionTimeRemaining % 60;
+                timerElement.innerHTML = `
+                    <i class="fas fa-clock"></i>
+                    <span>${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}</span>
+                `;
+            }
+        }
+
+        // Navigation Functions
+        function nextQuestion() {
+            if (currentQuestionIndex < currentTest.questions.length - 1) {
+                // Check if current question is unanswered
+                if (userAnswers[currentQuestionIndex] === undefined || userAnswers[currentQuestionIndex] === null) {
+                    missedQuestions.push(currentQuestionIndex);
+                }
+                
+                currentQuestionIndex++;
+                loadQuestion();
+                startQuestionTimer();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+                startQuestionTimer();
+            }
+        }
+
+        function updateButtons() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            if (currentQuestionIndex === currentTest.questions.length - 1) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'flex';
+            } else {
+                nextBtn.style.display = 'flex';
+                submitBtn.style.display = 'none';
+            }
+        }
+
+        function updateProgress() {
+            document.getElementById('currentQuestion').textContent = currentQuestionIndex + 1;
+            document.getElementById('currentScore').textContent = score;
+            
+            const progress = ((currentQuestionIndex + 1) / currentTest.questions.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        // Submit Test
+        function submitTest() {
+            clearInterval(timer);
+            clearInterval(questionTimer);
+            
+            // Check if current question is unanswered
+            if (userAnswers[currentQuestionIndex] === undefined || userAnswers[currentQuestionIndex] === null) {
+                missedQuestions.push(currentQuestionIndex);
+            }
+            
+            // Calculate score
+            score = 0;
+            for (let i = 0; i < currentTest.questions.length; i++) {
+                if (userAnswers[i] === currentTest.questions[i].correct) {
+                    score++;
+                }
+            }
+
+            const percentage = Math.round((score / currentTest.questions.length) * 100);
+            const timeTaken = Math.floor((Date.now() - startTime) / 1000);
+            
+            showResults(percentage, score, timeTaken);
+        }
+
+        // Show Results
+        function showResults(percentage, correct, timeTaken) {
+            document.getElementById('testModal').style.display = 'none';
+            document.getElementById('resultsModal').style.display = 'flex';
+            
+            const wrong = currentTest.questions.length - correct - missedQuestions.length;
+            
+            document.getElementById('finalScore').textContent = percentage + '%';
+            document.getElementById('correctAnswers').textContent = correct;
+            document.getElementById('wrongAnswers').textContent = wrong;
+            document.getElementById('missedAnswers').textContent = missedQuestions.length;
+            
+            const minutes = Math.floor(timeTaken / 60);
+            const seconds = timeTaken % 60;
+            document.getElementById('timeTaken').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Set result message based on percentage
+            let message = '';
+            if (percentage >= 80) {
+                message = 'Excellent! Outstanding Performance!';
+            } else if (percentage >= 60) {
+                message = 'Good Job! Keep Practicing!';
+            } else if (percentage >= 40) {
+                message = 'Nice Try! Room for Improvement!';
+            } else {
+                message = 'Keep Learning! Practice Makes Perfect!';
+            }
+            document.getElementById('resultMessage').textContent = message;
+        }
+
+        // Modal Functions
+        function closeTestModal() {
+            if (confirm('Are you sure you want to exit the test? Your progress will be lost.')) {
+                clearInterval(timer);
+                clearInterval(questionTimer);
+                document.getElementById('testModal').style.display = 'none';
+            }
+        }
+
+        function closeResultsModal() {
+            document.getElementById('resultsModal').style.display = 'none';
+        }
+
+        function reviewAnswers() {
+            // Implement answer review functionality
+            showToast('Answer review feature coming soon!', 'info');
+        }
+
+        function retakeTest() {
+            closeResultsModal();
+            startTest(currentTest);
+        }
+
+        // View Details Function
+        function viewDetails(testId) {
+            const test = testQuestions[testId];
+            if (test) {
+                showToast(`${test.title}: ${test.questions.length} questions, ${test.time} minutes`, 'info');
+            }
+        }
+
+        // Initialize tabs and search
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize category tabs
+            const categoryButtons = document.querySelectorAll('#testTabs .tab-button');
+            const testItems = document.querySelectorAll('.test-item');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter tests
+                    testItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Initialize search
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                filterTests(query);
+            });
+
+            // Add transition styles
+            testItems.forEach(item => {
+                item.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Filter tests based on search
+        function filterTests(query) {
+            const testItems = document.querySelectorAll('.test-item');
+            
+            testItems.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const description = item.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(query) || description.includes(query)) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Toast notification function
+        function showToast(message, type = 'info') {
+            // Remove existing toast if any
+            const existingToast = document.querySelector('.toast-notification');
+            if (existingToast) {
+                existingToast.remove();
+            }
+            
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast-notification toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                    <span>${message}</span>
+                </div>
+                <button class="toast-close" onclick="this.parentElement.remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            
+            // Add to body
+            document.body.appendChild(toast);
+            
+            // Show toast
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    if (toast.parentElement) {
+                        toast.remove();
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

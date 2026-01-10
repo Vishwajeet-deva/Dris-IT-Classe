@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lectures - Dris IT Classes</title>
+    <meta name="description" content="Watch free video lectures on Computer Fundamentals, Programming, Reasoning, and Competitive Exams. Learn from expert faculty at Dris IT Classes.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2><i class="fas fa-graduation-cap"></i> Dris IT Classes</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="coming-soon.html" class="nav-link">Coming Soon</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li class="nav-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Video Lectures</h1>
+            <p>Learn from Expert Faculty Through Comprehensive Video Content</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for videos...">
+                </div>
+                <div class="filter-tabs" id="videoTabs">
+                    <button class="tab-button active" data-category="all">All Videos</button>
+                    <button class="tab-button" data-category="computer-fundamentals">Computer Fundamentals</button>
+                    <button class="tab-button" data-category="programming">Programming</button>
+                    <button class="tab-button" data-category="reasoning">Reasoning</button>
+                    <button class="tab-button" data-category="competitive-exams">Competitive Exams</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Videos -->
+    <section class="featured-videos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Video Lectures</h2>
+                <p>Most Popular and Highly Rated Video Content</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-video">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="video-duration">45:30</div>
+                        <div class="video-badge">Featured</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Complete Computer Fundamentals Course</h3>
+                        <p>Comprehensive video course covering all basic computer concepts with practical examples.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 12,543 Views</span>
+                            <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="playVideo('computer-fundamentals-complete')">
+                        <i class="fas fa-play"></i> Watch Now
+                    </button>
+                </div>
+                <div class="featured-video">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="video-duration">38:45</div>
+                        <div class="video-badge">Popular</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>C Programming Complete Tutorial</h3>
+                        <p>Learn C programming from basics to advanced concepts with practical examples.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 8,234 Views</span>
+                            <span><i class="fas fa-clock"></i> 1 day ago</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="playVideo('c-programming-complete')">
+                        <i class="fas fa-play"></i> Watch Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Categories -->
+    <section class="video-categories">
+        <div class="container">
+            <div class="videos-grid" id="videosGrid">
+                <!-- Computer Fundamentals Videos -->
+                <div class="video-item" data-category="computer-fundamentals">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">25:30</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Introduction to Computers</h3>
+                            <p>Basic concepts, history, and evolution of computers with practical examples.</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 5,234 Views</span>
+                                <span><i class="fas fa-clock"></i> 3 days ago</span>
+                                <span><i class="fas fa-star"></i> 4.7/5</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('intro-computers')">
+                                <i class="fas fa-play"></i> Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('intro-computers')">
+                                <i class="fas fa-plus"></i> Add to Playlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Videos -->
+                <div class="video-item" data-category="programming">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">32:15</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>C Programming Basics</h3>
+                            <p>Learn the fundamentals of C programming including variables, data types, and operators.</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 7,892 Views</span>
+                                <span><i class="fas fa-clock"></i> 1 week ago</span>
+                                <span><i class="fas fa-star"></i> 4.8/5</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('c-basics')">
+                                <i class="fas fa-play"></i> Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('c-basics')">
+                                <i class="fas fa-plus"></i> Add to Playlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reasoning Videos -->
+                <div class="video-item" data-category="reasoning">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">28:45</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Logical Reasoning Tricks</h3>
+                            <p>Master logical reasoning techniques for competitive exams with shortcuts and tips.</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 4,567 Views</span>
+                                <span><i class="fas fa-clock"></i> 2 weeks ago</span>
+                                <span><i class="fas fa-star"></i> 4.6/5</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('logical-reasoning')">
+                                <i class="fas fa-play"></i> Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('logical-reasoning')">
+                                <i class="fas fa-plus"></i> Add to Playlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competitive Exam Videos -->
+                <div class="video-item" data-category="competitive-exams">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">35:20</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>O Level Exam Preparation</h3>
+                            <p>Complete preparation guide for O Level computer exam with important topics and tips.</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 6,123 Views</span>
+                                <span><i class="fas fa-clock"></i> 1 month ago</span>
+                                <span><i class="fas fa-star"></i> 4.9/5</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('o-level-prep')">
+                                <i class="fas fa-play"></i> Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('o-level-prep')">
+                                <i class="fas fa-plus"></i> Add to Playlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Programming Videos -->
+                <div class="video-item" data-category="programming">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">42:10</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Python Programming for Beginners</h3>
+                            <p>Start your Python journey with this comprehensive beginner-friendly tutorial.</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 9,876 Views</span>
+                                <span><i class="fas fa-clock"></i> 5 days ago</span>
+                                <span><i class="fas fa-star"></i> 4.9/5</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('python-beginners')">
+                                <i class="fas fa-play"></i> Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('python-beginners')">
+                                <i class="fas fa-plus"></i> Add to Playlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Reasoning Videos -->
+                <div class="video-item" data-category="reasoning">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">30:15</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Quantitative Aptitude Shortcuts</h3>
+                            <p>Learn time-saving shortcuts for quantitative aptitude problems in competitive exams.</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 3,456 Views</span>
+                                <span><i class="fas fa-clock"></i> 3 weeks ago</span>
+                                <span><i class="fas fa-star"></i> 4.7/5</span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn btn-primary" onclick="playVideo('quant-shortcuts')">
+                                <i class="fas fa-play"></i> Watch Now
+                            </button>
+                            <button class="btn btn-outline" onclick="addToPlaylist('quant-shortcuts')">
+                                <i class="fas fa-plus"></i> Add to Playlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Free Video Lectures</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">Total Views</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Subjects Covered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.8/5</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need More Video Content?</h2>
+                <p>Explore our premium courses with comprehensive video lectures and live sessions</p>
+                <div class="cta-buttons">
+                    <a href="courses.html" class="btn btn-primary btn-large">Browse Courses</a>
+                    <a href="free-notes.html" class="btn btn-secondary btn-large">Download Notes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Dris IT Classes</h3>
+                    <p>Providing quality computer education at affordable prices since 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="free-notes.html">Free Notes</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="test-series.html">Test Series</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Pages</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@drisitclasses.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dris IT Classes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Initialize tabs and search
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize category tabs
+            const categoryButtons = document.querySelectorAll('#videoTabs .tab-button');
+            const videoItems = document.querySelectorAll('.video-item');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter videos
+                    videoItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Initialize search
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                filterVideos(query);
+            });
+
+            // Add transition styles
+            videoItems.forEach(item => {
+                item.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Filter videos based on search
+        function filterVideos(query) {
+            const videoItems = document.querySelectorAll('.video-item');
+            
+            videoItems.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const description = item.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(query) || description.includes(query)) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Play video function
+        function playVideo(videoId) {
+            showToast(`Opening video player for ${videoId}...`, 'info');
+            // In real implementation, this would open the video player
+        }
+
+        // Add to playlist function
+        function addToPlaylist(videoId) {
+            showToast('Video added to your playlist!', 'success');
+            // In real implementation, this would add to user's playlist
+        }
+
+        // Toast notification function
+        function showToast(message, type = 'info') {
+            // Remove existing toast if any
+            const existingToast = document.querySelector('.toast-notification');
+            if (existingToast) {
+                existingToast.remove();
+            }
+            
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast-notification toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                    <span>${message}</span>
+                </div>
+                <button class="toast-close" onclick="this.parentElement.remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            
+            // Add to body
+            document.body.appendChild(toast);
+            
+            // Show toast
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    if (toast.parentElement) {
+                        toast.remove();
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
